@@ -34,6 +34,6 @@ resource "aws_iam_instance_profile" "instance_profile" {
 # Aqui que efetivamente criada a role do IAM que será associada ao instance profile.
 
 resource "aws_iam_role" "instance_role" {
-  name = var.ec2_resources.instance_role
+  name               = var.ec2_resources.instance_role
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 }
